@@ -19,10 +19,10 @@ services:
       - "9000:9000"
     #command:  server /export
     volumes:
-      - /home/mok/Minio:/export
+      - /home/${M_USER}/Minio:/export
     environment:
-      - "MINIO_ACCESS_KEY=<access-key>"
-      - "MINIO_SECRET_KEY=<secret-key>"
-      - "MINIO_UID=5001"
-      - "MINIO_GID=5000"
+      - "MINIO_ACCESS_KEY="
+      - "MINIO_SECRET_KEY="
+      - "MINIO_UID=${M_UID}"
+      - "MINIO_GID=${M_GID}"
        
